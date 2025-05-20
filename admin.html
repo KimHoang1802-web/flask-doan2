@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='admin.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./static/admin.css') }}">
+    <link rel="stylesheet" href="./static/admin.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
     
     <section id="menu">
         <div class="logo">
-            <img src="{{ url_for('static', filename='imgs/Logo.png') }}" alt="Logo">
+            <!-- <img src="{{ url_for('static', filename='imgs/Logo.png') }}" alt="Logo"> -->
+            <img src="./static/imgs/Logo.png" alt="">
         </div>
 
         <!-- Sidebar -->
@@ -55,7 +57,8 @@
 
             <div class="profile">
                 <i class='bx bx-bell' ></i>
-                <img src="{{ url_for('static', filename='imgs/admin.jpg') }}" alt="Avt">
+                <!-- <img src="{{ url_for('static', filename='imgs/admin.jpg') }}" alt="Avt"> -->
+                <img src="./static/imgs/admin.jpg" alt="">
             </div>
         </div>
 
@@ -72,8 +75,8 @@
                             <select id="tinhThanhSelect" required>
                                 <option value="">Chọn tỉnh/thành phố</option>
                                 <!-- Sẽ được load tự động -->
-                              </select>
-                              
+                            </select>
+                            
                             <!-- Input hidden để lưu ID tỉnh tương ứng -->
                             <input type="hidden" id="idTinhHidden">
                             <input type="hidden" id="idBen" placeholder="ID Bến" required>
@@ -723,6 +726,7 @@
     </section>
 
     <script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+    <script src="./static/js/admin.js"></script>
     
 </body>
 </html>
